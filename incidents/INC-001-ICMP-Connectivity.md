@@ -3,7 +3,6 @@
 **Status:** Resolved  
 **Category:** Networking / Firewall  
 **Environment:** Ubuntu Server + Windows Workstation  
-**Severity:** Low — Diagnostic connectivity issue
 
 ## 1. Problem Description
 
