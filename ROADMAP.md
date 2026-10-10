@@ -40,12 +40,15 @@ Each new technology must solve a practical problem, improve the existing environ
 
 **Focus:** Improve infrastructure security, visibility, and stability.
 
-- System and network hardening
-- Firewalls and access control
-- Centralized logging and monitoring
-- Backup and recovery
-- Performance and availability
-- Incident investigation
+
+- Run real applications and services on the existing infrastructure.
+- Simulate realistic user traffic and controlled workloads.
+- Measure CPU, RAM, disk I/O, network usage, and application response times.
+- Identify performance bottlenecks and infrastructure limitations.
+- Investigate failures and resource exhaustion.
+- Improve reliability, performance, and capacity based on measurable results.
+
+**Goal:** Understand how real infrastructure performs, fails, recovers, and improves under realistic workloads.
 
 **Outcome:** A more secure, observable, and resilient infrastructure.
 
