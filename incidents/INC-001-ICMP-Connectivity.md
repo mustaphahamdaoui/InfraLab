@@ -120,7 +120,7 @@ becoming outdated after an address change.
 
 ---
 
-Security & Privacy Notice
+## Security & Privacy Notice
 
 Some IP addresses and sensitive network information have been hidden or anonymized for security and privacy reasons. Thank you for your understanding.
 
