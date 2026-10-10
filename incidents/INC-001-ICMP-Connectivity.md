@@ -108,10 +108,21 @@ The test confirmed that ICMP Echo Requests and replies were successfully exchang
 - Troubleshooting requires testing assumptions and verifying changes.
 - A rule being enabled does not guarantee that it matches the intended traffic.
 
-## 8. Future Improvement
+## 8. Preventive Improvement — DHCP Reservation
 
-Review DHCP configuration and consider reserving an IP address for Ubuntu Server to prevent future changes from invalidating IP-based firewall restrictions.
+A DHCP reservation was configured on the FRITZ!Box
+to keep the Ubuntu Server's IPv4 address consistent.
+
+<img width="739" height="439" alt="Screenshot 2026-10-10 230242" src="https://github.com/user-attachments/assets/6e8e692c-4295-4489-bc83-6dbfbd347ab2" />
+
+This reduces the risk of the IP-based firewall rule
+becoming outdated after an address change.
 
 ---
 
+Security & Privacy Notice
+
+Some IP addresses and sensitive network information have been hidden or anonymized for security and privacy reasons. Thank you for your understanding.
+
 **Incident closed — Connectivity verified successfully.**
+
