@@ -6,7 +6,11 @@
 
 InfraLab is a long-term infrastructure engineering project designed to grow continuously as my technical skills develop.
 
-The project begins with a physical Linux server and a local network. Over time, the same infrastructure will evolve into a more advanced environment incorporating automation, monitoring, cloud technologies, and security engineering.
+The project starts with a physical Linux server and a local network. Over time, the same infrastructure will evolve into a realistic, production-like environment hosting useful applications, databases, and services.
+
+As the infrastructure grows, it will handle controlled workloads, simulated user traffic, performance testing, monitoring, automation, and real-world troubleshooting scenarios.
+
+The long-term objective is to understand how infrastructure behaves under pressure, identify bottlenecks, improve reliability, and progressively integrate cloud technologies and security engineering.
 
 **One infrastructure. Continuous improvement. Real engineering experience.**
 
