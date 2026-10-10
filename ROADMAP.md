@@ -1,126 +1,141 @@
-# InfraLab — Engineering Roadmap
+# InfraLab — Long-Term Engineering Roadmap
 
 ## Vision
 
-Build and continuously improve one real infrastructure environment, starting with Linux and networking and progressively expanding into automation, cloud infrastructure, and security.
+InfraLab is a continuously evolving infrastructure engineering homelab.
 
-**Core rule: Never restart from scratch. Every phase must build upon the existing infrastructure.**
+The project begins with Linux and networking fundamentals and gradually expands into systems administration, reliability engineering, automation, cloud infrastructure, and security.
 
-## Phase 0 — Foundation & Documentation
+**One infrastructure. Continuous evolution. No unnecessary restarts.**
 
-**Status: In Progress**
-
-- [x] Set up a physical Ubuntu Server
-- [x] Identify network interfaces and IP addresses
-- [x] Test connectivity between Ubuntu and Windows
-- [x] Troubleshoot an ICMP firewall issue
-- [x] Create the InfraLab GitHub repository
-- [x] Create the project README
-- [ ] Document Incident 001
-- [ ] Document the initial network architecture
-- [ ] Verify DHCP configuration and configure an IP reservation if needed
-
-**Milestone:** A documented and functioning base environment.
-
-## Phase 1 — Linux & Networking
-
-**Status: Learning / Active Development**
-
-- [ ] Strengthen Linux administration skills
-- [ ] Manage processes, services, permissions, and storage
-- [ ] Configure and troubleshoot SSH
-- [ ] Deploy and manage Nginx
-- [ ] Understand TCP/IP, DNS, routing, and firewalls
-- [ ] Diagnose network and service failures
-- [ ] Document configuration changes and incidents
-
-**Milestone:** Independently manage and troubleshoot the Linux server and its network services.
-
-## Phase 2 — Reliability & Monitoring
-
-**Status: Planned**
-
-- [ ] Centralize important logs
-- [ ] Monitor system and service health
-- [ ] Configure basic service alerts
-- [ ] Implement and test backups
-- [ ] Investigate simulated failures
-- [ ] Document recovery procedures
-
-**Milestone:** Detect failures, investigate their causes, and recover services reliably.
-
-## Phase 3 — Git & Infrastructure Automation
-
-**Status: Planned**
-
-- [ ] Learn Git workflows
-- [ ] Develop Bash automation scripts
-- [ ] Learn Python for infrastructure tasks
-- [ ] Create a service health-check tool
-- [ ] Automate routine administration tasks
-- [ ] Add tests and technical documentation
-
-**Milestone:** Develop working automation tools that improve the existing infrastructure.
-
-## Phase 4 — Containers & Deployment
-
-**Status: Planned**
-
-- [ ] Understand container fundamentals
-- [ ] Deploy services with Docker
-- [ ] Use Docker Compose
-- [ ] Manage persistent storage and networking
-- [ ] Build a basic CI/CD workflow
-- [ ] Troubleshoot deployment failures
-
-**Milestone:** Deploy and maintain containerized services reproducibly.
-
-## Phase 5 — Microsoft Azure & Hybrid Infrastructure
-
-**Status: Planned**
-
-- [ ] Learn Azure fundamentals
-- [ ] Configure Azure networking and virtual machines
-- [ ] Connect relevant cloud services to InfraLab
-- [ ] Understand cloud identity and access management
-- [ ] Introduce Infrastructure as Code
-- [ ] Implement cloud monitoring and cost controls
-
-**Milestone:** Extend InfraLab into a practical hybrid infrastructure environment.
-
-## Phase 6 — Infrastructure & Cloud Security
-
-**Status: Planned**
-
-- [ ] Strengthen Linux and network security
-- [ ] Apply identity and least-privilege principles
-- [ ] Implement security monitoring
-- [ ] Manage secrets and credentials securely
-- [ ] Investigate security incidents
-- [ ] Improve infrastructure resilience
-
-**Milestone:** Demonstrate practical infrastructure security and incident investigation skills.
+Each new technology must solve a practical problem, improve the existing environment, or introduce a meaningful engineering capability.
 
 ---
 
-## Continuous Engineering Cycle
+## Phase 1 — Linux & Networking Foundations
 
-Every important change follows this workflow:
+**Focus:** Build a strong and reliable technical foundation.
 
-**Plan → Understand → Implement → Test → Troubleshoot → Document → Improve**
+- Linux system administration
+- Networking fundamentals
+- Network configuration and troubleshooting
+- System services and resource management
+- Remote administration
 
-## Project Rules
+**Outcome:** A working Linux infrastructure with reliable network connectivity.
 
-1. Maintain one continuously evolving infrastructure.
-2. Learn technologies when they solve real problems.
-3. Understand commands before using them.
-4. Document meaningful engineering decisions.
-5. Never publish secrets or sensitive infrastructure information.
-6. Prioritize practical experience and autonomy.
-7. Keep future phases flexible as requirements and skills evolve.
+## Phase 2 — Infrastructure & Network Services
 
-## Career Objective
+**Focus:** Expand the environment into a functional multi-service infrastructure.
 
-Develop a demonstrable technical portfolio supporting a 2027 IT internship in infrastructure and automation, with the long-term goal of working in Cloud Engineering and Cloud Security.
+- Web servers and network services
+- DNS and service communication
+- Multi-server architecture
+- Service management
+- Infrastructure configuration
 
-This roadmap is a living document. Milestones and priorities may evolve, but the same infrastructure remains the foundation.
+**Outcome:** Multiple interconnected services operating within the same infrastructure.
+
+## Phase 3 — Security, Monitoring & Reliability
+
+**Focus:** Improve infrastructure security, visibility, and stability.
+
+- System and network hardening
+- Firewalls and access control
+- Centralized logging and monitoring
+- Backup and recovery
+- Performance and availability
+- Incident investigation
+
+**Outcome:** A more secure, observable, and resilient infrastructure.
+
+## Phase 4 — Automation & Infrastructure Development
+
+**Focus:** Reduce manual operations through practical software development.
+
+- Git and version control
+- Bash scripting
+- Python automation
+- Infrastructure management tools
+- Automated health checks
+- Configuration management
+
+**Outcome:** Working automation tools that improve and maintain the existing infrastructure.
+
+## Phase 5 — Containers & Deployment Engineering
+
+**Focus:** Improve application deployment and infrastructure reproducibility.
+
+- Containerization with Docker
+- Container networking and storage
+- Multi-container applications
+- Deployment workflows
+- CI/CD fundamentals
+- Infrastructure testing
+
+**Outcome:** Reproducible application and service deployments.
+
+## Phase 6 — Cloud & Hybrid Infrastructure
+
+**Focus:** Extend InfraLab beyond the local environment.
+
+- Microsoft Azure
+- Cloud computing and networking
+- Virtual machines and cloud services
+- Identity and access management
+- Infrastructure as Code
+- Hybrid infrastructure
+- Cloud monitoring and cost management
+
+**Outcome:** An integrated local and cloud infrastructure.
+
+## Phase 7 — Cloud Security & Advanced Engineering
+
+**Focus:** Strengthen security, automation, and infrastructure resilience.
+
+- Cloud identity and security
+- Advanced access control
+- Security monitoring and incident response
+- Secrets management
+- Infrastructure security automation
+- Advanced troubleshooting
+- Reliability and performance optimization
+
+**Outcome:** An evolving infrastructure demonstrating advanced engineering and security practices.
+
+---
+
+## Continuous Improvement
+
+InfraLab does not end after the final phase.
+
+The infrastructure will continue to evolve through:
+
+- New capabilities and services
+- Architectural improvements
+- Security enhancements
+- Automation
+- Reliability improvements
+- Real-world troubleshooting
+
+## Engineering Principles
+
+**Understand → Design → Build → Test → Troubleshoot → Document → Improve**
+
+1. Maintain and improve the same infrastructure.
+2. Prioritize understanding over copying commands.
+3. Introduce technologies when they become useful.
+4. Prefer practical solutions over unnecessary complexity.
+5. Apply security and reliability principles.
+6. Document meaningful technical decisions and incidents.
+7. Keep the architecture modular and expandable.
+
+## Roadmap Philosophy
+
+This roadmap defines the long-term direction of InfraLab, not a fixed schedule or daily checklist.
+
+Phases can overlap, and their implementation order may change based on technical requirements, learning progress, and practical opportunities.
+
+Detailed implementations, configuration changes, and troubleshooting reports are documented separately.
+
+**InfraLab is a living engineering environment, not a collection of disconnected tutorials.**
