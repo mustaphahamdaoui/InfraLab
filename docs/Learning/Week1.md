@@ -2,9 +2,9 @@
 
 I use this file to record my **real progress**, including things that went wrong. I don't want a separate report for every small mistake. The permanent architecture and setup are in [INFRASTRUCTURE.md](../INFRASTRUCTURE.md); this log is for what I tried, what I understood, and what I want to improve.
 
-**About AI assistance:** I use ChatGPT to explain concepts, review my investigations and help edit documentation. I also asked it to create **controlled, reversible failure scripts and support tickets** so I could practise diagnosis without being given the cause. **I did not write those failure scripts myself.** Their role is to provide exercises; the terminal investigations and screenshots are from my own Ubuntu and Windows machines. I distinguish what I tested from what was only explained to me.
+**About AI assistance:** I use Ai to explain concepts, review my investigations and help edit documentation. I also asked it to create **controlled, reversible failure scripts and support tickets** so I could practise diagnosis without being given the cause. **I did not write those failure scripts myself.** Their role is to provide exercises; the terminal investigations and screenshots are from my own Ubuntu and Windows machines. I distinguish what I tested from what was only explained to me.
 
-## Week 01 — 9–13 October 2026
+## Week 01 — 9–15 October 2026
 
 **Focus:** Build a working local Linux web service, then secure the connection.
 
@@ -28,8 +28,6 @@ I use this file to record my **real progress**, including things that went wrong
 - I learned that HTTP requests to an IP and requests to `infra.test` can select different Nginx sites.
 
 **Result:** A working local website, redirected to HTTPS and verified with a supplied self-signed certificate. The permanent setup and original screenshots are in [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
-
-## Week 02 — From 14 October 2026
 
 **Focus:** Stop following configuration steps blindly and practise troubleshooting under realistic conditions.
 
