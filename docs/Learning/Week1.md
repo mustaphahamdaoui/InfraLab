@@ -1,4 +1,4 @@
-# InfraLab — Learning Log
+# InfraLab — Learning Log (week1)
 
 I use this file to record my **real progress**, including things that went wrong. I don't want a separate report for every small mistake. The permanent architecture and setup are in [INFRASTRUCTURE.md](./INFRASTRUCTURE.md); this log is for what I tried, what I understood, and what I want to improve.
 
@@ -89,26 +89,3 @@ I subsequently confirmed in our conversation that the site worked again. **I did
 - Use Nginx access/error logs to support or reject a hypothesis.
 - Change one thing at a time, test it, and record the result.
 - Eventually build **my own** small Bash or Python health-check tool, rather than only running AI-generated drill scripts.
-
----
-
-## Weekly update template
-
-*Add a short section here **only after** doing meaningful new work. The week numbers describe my project sessions; they are not claims that every week contains the same amount of work.*
-
-```markdown
-## Week 03 — Dates
-
-**Focus:** One sentence.
-
-**What I did:**
-- Real things I built, investigated or tested.
-
-**What went wrong / what I learned:**
-- The most useful mistake or lesson.
-
-**Evidence / result:**
-- Link to an actual configuration, commit or screenshot if useful.
-
-**Next:** One practical objective.
-```
