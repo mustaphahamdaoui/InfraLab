@@ -1,6 +1,6 @@
 # InfraLab — Learning Log (week1)
 
-I use this file to record my **real progress**, including things that went wrong. I don't want a separate report for every small mistake. The permanent architecture and setup are in [INFRASTRUCTURE.md](./INFRASTRUCTURE.md); this log is for what I tried, what I understood, and what I want to improve.
+I use this file to record my **real progress**, including things that went wrong. I don't want a separate report for every small mistake. The permanent architecture and setup are in [INFRASTRUCTURE.md](../INFRASTRUCTURE.md); this log is for what I tried, what I understood, and what I want to improve.
 
 **About AI assistance:** I use ChatGPT to explain concepts, review my investigations and help edit documentation. I also asked it to create **controlled, reversible failure scripts and support tickets** so I could practise diagnosis without being given the cause. **I did not write those failure scripts myself.** Their role is to provide exercises; the terminal investigations and screenshots are from my own Ubuntu and Windows machines. I distinguish what I tested from what was only explained to me.
 
@@ -27,7 +27,7 @@ I use this file to record my **real progress**, including things that went wrong
 - Editing a protected Windows `hosts` file in Notepad didn't initially save to the actual file.
 - I learned that HTTP requests to an IP and requests to `infra.test` can select different Nginx sites.
 
-**Result:** A working local website, redirected to HTTPS and verified with a supplied self-signed certificate. The permanent setup and original screenshots are in [INFRASTRUCTURE.md](./INFRASTRUCTURE.md).
+**Result:** A working local website, redirected to HTTPS and verified with a supplied self-signed certificate. The permanent setup and original screenshots are in [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
 
 ## Week 02 — From 14 October 2026
 
@@ -52,7 +52,7 @@ Some of my tests were misleading:
 - An HTTPS request to the IP produced a certificate-name mismatch. The certificate contains the DNS name `infra.test`, not the IP.
 - `systemctl status nginx` showed a running service. That did not establish that the site content was readable.
 
-![Nginx running while I was investigating](./evidence/18-service-active-during-investigation.png)
+![Nginx running while I was investigating](../evidence/18-service-active-during-investigation.png)
 
 **What I learned:** start by reproducing the reported website symptom using the correct hostname and HTTP response. Then inspect file permissions or error logs if the response suggests access is denied. A process being active is only one part of service health.
 
@@ -72,11 +72,11 @@ return 302 http://$host$request_uri;
 
 I had one redirect sending HTTP to HTTPS and a second sending HTTPS back to HTTP. The client would keep bouncing between the two. **`nginx -t` can accept this syntax**; the problem is the behavior, not the grammar of the file.
 
-![Original terminal showing the competing redirects](./evidence/19-original-opposing-redirects.png)
+![Original terminal showing the competing redirects](../evidence/19-original-opposing-redirects.png)
 
 I removed the unwanted `return 302` from the HTTPS virtual host. My edited configuration is captured here:
 
-![Original edited configuration after removing the second redirect](./evidence/20-original-https-config-after-edit.png)
+![Original edited configuration after removing the second redirect](../evidence/20-original-https-config-after-edit.png)
 
 I subsequently confirmed in our conversation that the site worked again. **I did not capture a fresh, final end-to-end curl result for this exercise**, so the recovery is reported rather than independently documented in the screenshots.
 
