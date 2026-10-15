@@ -5,7 +5,7 @@
 
 This page describes **what I have actually set up and verified** in my home lab. I update it when the infrastructure changes—not every time I practise a command or solve an exercise.
 
-For the mistakes, troubleshooting challenges, and weekly progress, see my [learning log](./LEARNING_LOG.md). The original terminal and router screenshots are kept in [`evidence/`](./evidence/); identifying network details have been masked.
+For the mistakes, troubleshooting challenges, and weekly progress, see my [learning log](./Learning/). The original terminal and router screenshots are kept in [`evidence/`](./evidence/); identifying network details have been masked.
 
 ## The setup
 
