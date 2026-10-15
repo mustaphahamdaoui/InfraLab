@@ -142,4 +142,4 @@ The successful test does **not** mean that the certificate was installed as trus
 - Build repeatable health checks, inspect logs and automate basic diagnostics.
 - The website is a **static HTML page**. I have not built an application backend, cloud deployment or production monitoring here.
 
-The deliberate troubleshooting exercises are described in [LEARNING_LOG.md](./LEARNING), not here. The Bash failure scripts were **generated with AI at my request**, rather than written by me, and this documentation was edited with AI assistance. The configuration, tests and screenshots refer to activity on my own lab machines.
+The deliberate troubleshooting exercises are described in [Week 1 — Learning Log](./Learning/Week1.md), not here. The Bash failure scripts were **generated with AI at my request**, rather than written by me, and this documentation was edited with AI assistance. The configuration, tests and screenshots refer to activity on my own lab machines.
