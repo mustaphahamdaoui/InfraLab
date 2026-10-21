@@ -7,7 +7,7 @@
 InfraLab is a long-term infrastructure engineering project designed to grow continuously as my technical skills develop.
 
 The project starts with a physical Linux server and a local network. Over time, the same infrastructure will evolve into a realistic, production-like environment hosting useful applications, databases, and services.
-![Server](./evidence/Server.jpg)
+<img src="./evidence/Server.jpg" width="600" alt="Server">
 
 As the infrastructure grows, it will handle controlled workloads, simulated user traffic, performance testing, monitoring, automation, and real-world troubleshooting scenarios.
 
