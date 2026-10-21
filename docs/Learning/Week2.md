@@ -35,5 +35,3 @@ I saw `Address already in use` in the service output, used `ss` to find a listen
 - A service can have a main unit file **and** drop-ins. `Permission denied` does not mean I should immediately weaken file permissions.
 - Before stopping a process, I should identify its owner and which service manages it. After a fix, I need to verify the actual behavior, not just the command result.
 - **Next:** Bash fundamentals, then my own Nginx/HTTPS health-check script. Advanced Linux and networking topics will continue through the same homelab.
-
-**Cleanup note:** The final incident's `restore` command was supplied, but its successful execution is not yet confirmed in these screenshots. The isolated exercise should be cleaned up and checked on the server before treating it as fully closed.
