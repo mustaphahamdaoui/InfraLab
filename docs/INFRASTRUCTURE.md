@@ -1,11 +1,15 @@
 # InfraLab — Infrastructure
 
-*A physical Ubuntu Server, a Windows workstation, and a home LAN.*  
-*Technical reference · Last documented: 15 October 2026*
+# InfraLab — Infrastructure
 
-This page describes **what I have actually set up and verified** in my home lab. I update it when the infrastructure changes—not every time I practise a command or solve an exercise.
+*Physical Ubuntu Server · Windows workstation · Home LAN*
 
-For the mistakes, troubleshooting challenges, and weekly progress, see my [learning log](./Learning/). The original terminal and router screenshots are kept in [`evidence/`](./evidence/); identifying network details have been masked.
+**Last documented:** 15 October 2026
+
+This document describes the infrastructure I have configured and verified in my homelab. It is updated when the infrastructure changes.
+
+**Related documentation:**
+[Learning Log](./Learning/) · [Practical Drills](../drills/README.md) · [Evidence](./evidence/) · [Roadmap](../ROADMAP.md)
 
 ## The setup
 
