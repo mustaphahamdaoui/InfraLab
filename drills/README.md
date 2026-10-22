@@ -1,7 +1,6 @@
 ### Practical Drills
 
-The **[drills/](./drills/)** directory contains hands-on Linux administration and infrastructure troubleshooting exercises performed in my physical Ubuntu Server homelab.
-
+The **drills/** directory contains hands-on Linux administration and infrastructure troubleshooting exercises performed in my physical Ubuntu Server homelab.
 Each drill focuses on a specific technical challenge, following a structured engineering approach:
 
 **Understand → Investigate → Diagnose → Fix → Verify → Document**
