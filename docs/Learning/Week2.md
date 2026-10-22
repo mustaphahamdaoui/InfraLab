@@ -1,7 +1,14 @@
-# InfraLab — Learning Log (Week 02)
+# InfraLab — Learning Log | Week 2
 
-**16–19 October 2026**  
-**Focus:** Linux administration, access control and diagnosing service failures on my existing Ubuntu homelab.
+This log documents my hands-on learning, troubleshooting experiences, and lessons learned.
+
+The verified infrastructure setup is documented in [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+
+### Learning Methodology
+
+The focus is on practical understanding, independent problem-solving, and continuous improvement.
+
+## Week 02 — 15–19 October 2026
 
 ## What I changed
 
