@@ -29,23 +29,23 @@ The HTTP 404 was a **deliberate test using a nonexistent path**, not an unexpect
 
 **First Bash version:** service state, an `if/else` decision, basic port check and exit codes.
 
-![First health-check script](../evidence/week03/01_first_bash_script.png)
+![First health-check script](../evidence/01_first_bash_script.png)
 
 **Service stopped:** the script detects the inactive Nginx service.
 
-![Nginx stopped and alert displayed](../evidence/week03/02_nginx_inactive_alert.png)
+![Nginx stopped and alert displayed](../evidence/02_nginx_inactive_alert.png)
 
 **HTTPS response:** the site returns HTTP 200 when requested with certificate verification.
 
-![HTTPS 200 response](../evidence/week03/03_https_200_response.png)
+![HTTPS 200 response](../evidence/03_https_200_response.png)
 
 **HTTP 404 test:** the script flags a failure even while ports 80/443 are listening, and returns `1`.
 
-![HTTP 404 detected by script](../evidence/week03/04_http_404_alert.png)
+![HTTP 404 detected by script](../evidence/04_http_404_alert.png)
 
 **Recovery:** after restoring the normal URL, the script displays `OK` again.
 
-![Health check after restoring original URL](../evidence/week03/05_url_restored_ok.png)
+![Health check after restoring original URL](../evidence/05_url_restored_ok.png)
 
 ## Lessons and limits
 
@@ -60,4 +60,4 @@ The HTTP 404 was a **deliberate test using a nonexistent path**, not an unexpect
 
 Practice small Bash functions and loops, improve diagnostics when necessary, and move toward Python scripting and scheduled checks.
 
-**AI assistance:** I used AI to explain concepts, discuss possible checks, and review the logic and documentation. I wrote, edited and executed the learning script myself on Ubuntu. The screenshots are from my lab; no external outage or independent production incident is claimed.
+I wrote, edited and executed the learning script myself on Ubuntu. The screenshots are from my lab; no external outage or independent production incident is claimed.
