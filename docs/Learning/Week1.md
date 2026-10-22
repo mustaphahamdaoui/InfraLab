@@ -1,8 +1,14 @@
-# InfraLab — Learning Log (week1)
+# InfraLab — Learning Log | Week 1
 
-I use this file to record my **real progress**, including things that went wrong. I don't want a separate report for every small mistake. The permanent architecture and setup are in [INFRASTRUCTURE.md](../INFRASTRUCTURE.md); this log is for what I tried, what I understood, and what I want to improve.
+This log documents my hands-on learning, troubleshooting experiences, and lessons learned.
 
-**About AI assistance:** I use Ai to explain concepts, review my investigations and help edit documentation. I also asked it to create **controlled, reversible failure scripts and support tickets** so I could practise diagnosis without being given the cause. **I did not write those failure scripts myself.** Their role is to provide exercises; the terminal investigations and screenshots are from my own Ubuntu and Windows machines. I distinguish what I tested from what was only explained to me.
+The verified infrastructure setup is documented in [INFRASTRUCTURE.md](../INFRASTRUCTURE.md).
+
+### Learning Methodology
+
+Some failure scenarios and scripts are AI-generated, while **investigation, diagnosis, recovery, and verification are performed independently** in my homelab.
+
+The focus is on practical understanding, independent problem-solving, and continuous improvement.
 
 ## Week 01 — 9–15 October 2026
 
@@ -33,7 +39,7 @@ I use this file to record my **real progress**, including things that went wrong
 
 ### Why I used failure scripts
 
-After getting the site working, I asked ChatGPT to generate two Bash exercises and present the symptoms as internal support tickets. I wanted to investigate them as if I were the technician on call. The scripts were **AI-generated**, not authored by me; I used them only on my own lab.
+After getting the site working, I asked AI to generate two Bash exercises and present the symptoms as internal support tickets. I wanted to investigate them as if I were the technician on call. The scripts were **AI-generated**, not authored by me; I used them only on my own lab.
 
 The AI-generated scripts belong in [`drills/`](../drills/) for reproducibility once uploaded to the repository. They should be inspected before running with `sudo`. These are training scenarios, **not actual production incidents**.
 
