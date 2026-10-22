@@ -14,7 +14,7 @@ Over time, the same infrastructure will evolve into a realistic, production-like
 
 The long-term objective is to understand how infrastructure behaves under pressure, identify bottlenecks, improve reliability, and progressively integrate cloud technologies and security engineering.
 
-**One infrastructure. Continuous improvement. Real engineering experience.**
+**One infrastructure. Continuous improvement.**
 
 ## Mission
 
@@ -66,8 +66,6 @@ The repository is organized around:
 ## Project Status
 
 **Active development**
-
-InfraLab currently focuses on Linux administration and networking fundamentals. More advanced capabilities will be introduced progressively.
 
 This is a personal learning environment, not a production infrastructure.
 
