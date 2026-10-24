@@ -1,6 +1,6 @@
-# InfraLab — Learning Log (Week 03)
+# InfraLab — Learning (Week 03)
 
-**20–22 October 2026 · Bash fundamentals and a first health check**
+**20–25 October 2026 · Bash fundamentals and a first health check**
 
 This week I built my first Bash script for the existing InfraLab server. The goal was to turn manual checks into a small, read-only diagnostic — not to build a production monitoring system.
 
@@ -56,8 +56,53 @@ The HTTP 404 was a **deliberate test using a nonexistent path**, not an unexpect
 - This is a **local check on the server**, not proof that clients on the network can reach it. I also tested HTTPS from Windows separately.
 - The script reports an issue; it **does not automatically restart services or change firewall rules**.
 
-## Next
+## Follow-up — 23–24 October 2026
 
-Practice small Bash functions and loops, improve diagnostics when necessary, and move toward Python scripting and scheduled checks.
+I refactored the health-check exercise into a second **local learning script**, `functions-test.sh`. This is separate from the earlier committed `scripts/health-check.sh`; the improved script has **not yet been confirmed as published or tested in its eventual GitHub form**.
 
-I wrote, edited and executed the learning script myself on Ubuntu. The screenshots are from my lab; no external outage or independent production incident is claimed.
+### What changed
+
+- Created a reusable `check_service()` function that accepts a service name through `$1`.
+- Used `local`, `return 0` / `return 1` and a `for` loop to check Nginx and SSH without repeating the same block.
+- Added `main()` with an `overall` result. A later successful check does not hide an earlier failure.
+- Added an HTTPS check using `curl -fsS --cacert`, with TLS verification enabled, and an explicit `HTTPS: OK` / `HTTPS: ALERT` message.
+
+### Real tests on the Ubuntu server
+
+| Scenario | Observation |
+| --- | --- |
+| Nginx and SSH active | Both reported `ok`; the script reported final `OK` and exited `0`. |
+| Nginx deliberately stopped | `nginx Alert`, `ssh ok`, and final `Alert` appeared. Nginx was subsequently restored. |
+| Website entry point temporarily moved | Nginx remained **active**, but the HTTPS request returned **HTTP 403**, and `curl` reported exit code **22**. The script reported `HTTPS: ALERT` / final `Alert` and exited **1**. |
+| Website file restored | Without restarting Nginx, the checks returned to `HTTPS: OK`, final `OK`, and exit code **0**. |
+
+The HTTP 403 was caused by **temporarily moving the lab's `index.html` file** and restoring it afterward. This was a controlled, reversible test on my homelab, not a production outage.
+
+### Additional evidence
+
+**Reusable function and loop:** a single function receives each service name and the main function keeps a shared failure result.
+
+![Bash function and for-loop code](../evidence/06_functions_loop.png)
+
+**Normal execution:** both services were active and the final exit code was `0`.
+
+![Services OK and final exit code 0](../evidence/07_services_all_ok.png)
+
+**Controlled service interruption:** Nginx was stopped and reported `Alert` while SSH was still OK.
+
+![Nginx stopped during real test](../evidence/08_real_nginx_failure.png)
+
+**HTTPS check added:** the learning script combines service-state checks with an HTTPS request.
+
+![HTTPS check in learning script](../evidence/09_https_health_check_code.png)
+
+**Application-level failure and recovery:** the same terminal capture shows Nginx `active`, HTTP 403 and exit `1`, followed by restored `index.html`, HTTPS `OK` and exit `0`.
+
+![HTTP 403 failure and successful restoration](../evidence/10_http_403_failure_and_recovery.png)
+
+### Takeaways and remaining limitations
+
+- `systemctl is-active` only reports service state; it does not prove the website is usable.
+- `curl` failure detection improves the check, but `-f` does **not** require an exact HTTP 200 response.
+- Checks were made **from the Ubuntu server**; they do not establish external client availability.
+- The learning script still has no explicit request timeout, scheduling, alert delivery or automatic recovery. It is **not production monitoring**.
