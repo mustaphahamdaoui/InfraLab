@@ -1,26 +1,33 @@
+
 #!/usr/bin/env bash
 
 check() {
     local failed=0
     local healthy=0
     local total=0
+    local curl_code
+    local html
     local service
     local status
-    local html
-        local curl_code
-    # HTTPS + HTML
-    if html=$(curl -fsS --max-time 10 --cacert /home/electrou/infra.test.crt https://infra.test); then curl_code=$?
+
+    # HTTPS + HTML verification
+    if html=$(curl -fsS --max-time 10 \
+        --cacert "$HOME/infra.test.crt" \
+        https://infra.test); then
+
+        curl_code=$?
         echo "HTTPS: OK (curl code: $curl_code)"
         ((healthy+=1))
         ((total+=1))
 
-        if echo "$html" | grep -qF "InfraLab - Web Server"; then
+        if printf '%s\n' "$html" | grep -qF "InfraLab - Web Server"; then
             echo "HTML CONTENT: OK"
             ((healthy+=1))
         else
             echo "HTML CONTENT: ALERT!"
             ((failed+=1))
         fi
+
         ((total+=1))
 
     else
@@ -31,24 +38,25 @@ check() {
         echo "HTML CONTENT: NOT CHECKED"
     fi
 
-    # Linux services
+    # Linux services verification
     for service in nginx ssh cron; do
         status=$(systemctl is-active "$service")
         ((total+=1))
 
         if [ "$status" = "active" ]; then
-            echo "$service : OK"
+            echo "$service: OK"
             ((healthy+=1))
         else
-            echo "$service : ALERT!"
+            echo "$service: ALERT!"
             ((failed+=1))
         fi
     done
 
     # Final report
-    echo "total checked : $total"
-    echo "Healthy : $healthy"
-    echo "Failed : $failed"
+    echo "------------------------"
+    echo "Total checked: $total"
+    echo "Healthy: $healthy"
+    echo "Failed: $failed"
 
     if [ "$failed" -ne 0 ]; then
         echo "SYSTEM DEGRADED!"
